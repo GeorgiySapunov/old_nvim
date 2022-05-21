@@ -61,7 +61,7 @@ return packer.startup(function(use)
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  use "lunarvim/darkplus.nvim"
+  use("rafi/awesome-vim-colorschemes")
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -85,14 +85,24 @@ return packer.startup(function(use)
   use "nvim-telescope/telescope.nvim"
 
   -- Treesitter
-  use {
-    "nvim-treesitter/nvim-treesitter",
-    run = ":TSUpdate",
-  }
+  use "nvim-treesitter/nvim-treesitter"
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- Git
   use "lewis6991/gitsigns.nvim"
+
+  -- Vim Script
+  use("mbbill/undotree")
+  use("dhruvasagar/vim-table-mode")
+  use("rlue/vim-barbaric")
+  use("lervag/vimtex")
+  use({
+  	"iamcco/markdown-preview.nvim",
+  	run = function()
+  		vim.fn["mkdp#util#install"]()
+  	end,
+  })
+  use("vimwiki/vimwiki")
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

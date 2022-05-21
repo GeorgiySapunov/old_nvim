@@ -79,6 +79,8 @@ local opts = {
 }
 
 local mappings = {
+  ["u"] = { "<cmd>UndotreeToggle<CR>", "UndoTree" },
+  ["m"] = { "<cmd>MarkdownPreviewToggle<CR>", "Markdown" },
   ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
   ["b"] = {
     "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
